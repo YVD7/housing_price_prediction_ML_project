@@ -1,2 +1,2 @@
 # machine-learning-class-project
-machine first project
+first machine-learning project
