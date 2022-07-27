@@ -1,7 +1,7 @@
 import logging
 from datetime import datetime
 import os
-from tkinter import CURRENT
+
 
 LOG_DIR = "housing_logs"
 
