@@ -2,8 +2,7 @@ from email import message
 import imp
 from lib2to3.refactor import RefactoringTool
 from multiprocessing.spawn import import_main_path
-from tkinter import E
-from tkinter.tix import Tree
+
 from housing.logger import logging
 from housing.exception import HousingException
 from housing.entity.config_entity import DataValidationConfig
