@@ -25,7 +25,7 @@ import os, sys
 from collections import namedtuple
 from datetime import datetime
 import pandas  as pd
-from housing.constant import EXPERIMENT_DIR_NAME
+from housing.constant import EXPERIMENT_DIR_NAME, EXPERIMENT_FILE_NAME
 Experiment = namedtuple("Experiment",["experiment_id","initialization_timestamp","artifact_time_stamp",
 "running_status","start_time","stop_time","execution_time","message","experiment_file_path"])
 
@@ -37,19 +37,14 @@ os.makedirs(config.training_pipeline_config.artifact_dir,exist_ok=True)
 class Pipeline(Thread):
 
     experiment:Experiment=Experiment(*([None]*9))
+    experiment_file_path = None 
 
-
-    experiment_file_path = os.path.json(config.training_pipeline_config.artifact_dir,
-    EXPERIMENT_DIR_NAME,"experiment.csv")
-
-    def __new__(cls, *args,**kwargs):
-        if Pipeline.experiment.running_status:
-            raise Exception("Pipeline is already running")
-        return super(Pipeline,cls).__new__(cls)
+ 
 
     def __init__(self, config: Configuartion = Config) -> None:
         try:
-            
+            os.makedirs(config.training_pipeline_config.artifact_dir, exist_ok=True)
+            Pipeline.experiment_file_path=os.path.join(config.training_pipeline_config.artifact_dir, EXPERIMENT_DIR_NAME, EXPERIMENT_FILE_NAME)
             super().__init__(daemon=False, name="pipeline")
             self.config = config
         except Exception as e:
