@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 
 
-LOG_DIR = "housing_logs"
+LOG_DIR = "logs"
 
 CURRENT_TIME_STAMP = f"{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}"
 
