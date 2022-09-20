@@ -1,5 +1,5 @@
 
-### machine-learning-class-project
+### housing_price_prediction_ML_project
 machine first project
 
 
