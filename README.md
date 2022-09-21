@@ -1,7 +1,12 @@
 Application url:
 [HousingPredictor](https://ml-regression-app.herokuapp.com/)
 
+<<<<<<< HEAD
 ## Start Machine Learning project.
+=======
+### housing_price_prediction_ML_project
+machine first project
+>>>>>>> af92130f65e6f841593c5afb44c2d098b77a3e22
 
 ### Software and account Requirement.
 
@@ -108,6 +113,7 @@ Install ipykernel
 ```
 pip install ipykernel
 ```
+<<<<<<< HEAD
 
 
 Data Drift:
@@ -116,3 +122,5 @@ When your datset stats gets change we call it as data drift
 
 
 ## Write a function to get training file path from artifact dir
+=======
+>>>>>>> af92130f65e6f841593c5afb44c2d098b77a3e22
