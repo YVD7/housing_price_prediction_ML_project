@@ -218,4 +218,3 @@ class DataTransformation:
 
     def __del__(self):
         logging.info(f"{'>>'*30}Data Transformation log completed.{'<<'*30} \n\n")
-
