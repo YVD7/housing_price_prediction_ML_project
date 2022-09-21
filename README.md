@@ -1,5 +1,5 @@
 Application url:
-[HousingPredictor](https://ml-regression-app.herokuapp.com/)
+[HousingPredictor](https://housing-lower-case.herokuapp.com/)
 
 <<<<<<< HEAD
 ## Start Machine Learning project.
